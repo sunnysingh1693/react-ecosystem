@@ -5,7 +5,13 @@ export const createTodo = (text) => ({
 });
 
 export const REMOVE_TODO = "REMOVE_TODO";
-export const remove_Todo = (text) => ({
+export const removeTodo = (text) => ({
   type: REMOVE_TODO,
+  payload: { text },
+});
+
+export const MARK_TODO_AS_COMPLETED = "MARK_COMPLETE_TODO";
+export const markTodoAsCompleted = (text) => ({
+  type: MARK_TODO_AS_COMPLETED,
   payload: { text },
 });

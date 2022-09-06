@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addTodoRequest } from "./thunks";
 import "./NewTodoForm.css";
+import { getTodos } from "./selectors";
 
 export const mapStateToProps = (state) => ({
-  todos: state.todos,
+  todos: getTodos(state),
 });
 export const mapDispatchToProps = (dispatch) => ({
   onCreatePressed: (title) => dispatch(addTodoRequest(title)),
@@ -26,6 +27,7 @@ export default connect(
         placeholder="Type your new todo here"
       />
       <button
+        type="submit"
         className="new-todo-button"
         onClick={() => {
           const isDuplicatetitle = todos.some(

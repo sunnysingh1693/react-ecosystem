@@ -21,7 +21,7 @@ export const loadTodosInProgress = () => ({
   type: LOAD_TODOS_IN_PROGRESS,
 });
 
-export const LOAD_TODOS_SUCCESS = "LOAD_TODOS_IN_SUCCESS";
+export const LOAD_TODOS_SUCCESS = "LOAD_TODOS_SUCCESS";
 export const loadTodosInSuccess = (todos) => ({
   type: LOAD_TODOS_SUCCESS,
   payload: { todos },
